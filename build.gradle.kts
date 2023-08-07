@@ -23,11 +23,17 @@ kotlin {
         }
         val jvmMain by getting
         val jvmTest by getting
-        val appleMain by creating {
+        val libraryMain by creating {
             dependsOn(commonMain)
         }
-        val appleTest by creating {
+        val libraryTest by creating {
             dependsOn(commonTest)
+        }
+        val appleMain by creating {
+            dependsOn(libraryMain)
+        }
+        val appleTest by creating {
+            dependsOn(libraryTest)
         }
         val iosArm64Main by getting {
             dependsOn(appleMain)
