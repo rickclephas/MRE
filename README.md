@@ -1,2 +1,1 @@
-# Minimal Reproducible Examples
-Just a collection of Minimal Reproducible Examples, which are hopefully already outdated 😇.
+# [KT-61017](https://youtrack.jetbrains.com/issue/KT-61017)
