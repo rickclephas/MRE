@@ -6,5 +6,8 @@ class ImplA: InterfaceA<Boolean> {
 
     override var property: Boolean
         get() = _property
-        set(value) { _property = value }
+        set(value) {
+            println("new value: $value")
+            _property = value
+        }
 }
