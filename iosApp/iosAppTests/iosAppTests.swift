@@ -18,6 +18,16 @@ final class iosAppTests: XCTestCase {
         XCTAssertFalse(a.property.boolValue)
     }
     
+    func testSwitchPropertyToFalseAInLoop() throws {
+        let a = ImplA()
+        XCTAssertTrue(a.property.boolValue)
+        while a.property.boolValue {
+            a.property = false
+        }
+        XCTAssertFalse(a.property.boolValue)
+    }
+    
+    
     func testSwitchPropertyToFalseB() throws {
         let b = ImplB()
         XCTAssertTrue(b.property.boolValue)
